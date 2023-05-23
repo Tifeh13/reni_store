@@ -857,12 +857,12 @@ section{
     .item-3-button {
         background-color: #000;
         color: #fff;
-        padding: 2px 4px;
+        padding: 10px 8px;
         gap: 10px;
         border-radius: 10px;
-        bottom: -16%;
-        right: 58%;
-        font-size: 9px;
+        bottom: -15%;
+        right: 55%;
+        font-size: 8px;
     }
     .grid h5 {
         font-style: normal;
@@ -947,12 +947,12 @@ section{
     .item-3-button {
         background-color: #000;
         color: #fff;
-        padding: 2px 4px;
+        padding: 12px 8px;
         gap: 10px;
         border-radius: 10px;
         bottom: -15%;
         right: 55%;
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 /* @media (min-width: 701px){

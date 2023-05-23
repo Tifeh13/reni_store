@@ -36,40 +36,22 @@ document.addEventListener('DOMContentLoaded', () =>{
 });
 
 
+const searchInput = document.getElementById('search');
 
-// window.addEventListener('DOMcontentLoaded',()=>{
-//     const searchInput = document.getElementById('search');
-//     const searchButton = document.getElementById('searchButton')
-//     const searchResults = document.getElementById('searchResults');
+const catalogs = document.querySelectorAll('.item-1');
 
-//     searchButton.addEventListener('click', performSearch);
+// Add event listener for input event
+searchInput.addEventListener('input', function(event) {
+  const searchTerm = event.target.value.toLowerCase();
 
+  // loop through wears type and display search result
+  catalogs.forEach(function(catalog) {
+    const title = catalog.querySelector('p').textContent.toLowerCase();
 
-// function performSearch(){
-//     const searchText = searchInput.value.trim().toLowerCase();
-//     const storedItems = JSON.parse(localStorage.getItem('items')) || [];
-//     const items = storedItems.filter(item => item.toLocaleLowerCase().includes(searchText));
-
-//     displaySearchResults(items);
-// }
-
-//     function displaySearchResults(items){
-//         searchResults.innerHTML = '';
-//         items.forEach((item)=>{
-//             const highlightedText = item.replace(new RegExp(searchInput.value, 'gi'), (match) => '<span class="highlight"${match}</span>');
-//             const li = document.createElement('li');
-//                 li.innerHTML=highlightedText;
-//                 searchResults.appendChild(li);
-            
-//         });
-//         }
-//     });
-
-
-function searchs(){
-    let Search = document.getElementById('search').value;
-    let paragraph = document.getElementById('paragraph');
-
-
-    console.log (search)
-}
+    if (title.includes(searchTerm)) {
+      catalog.style.display = 'block';
+    } else {
+      catalog.style.display = 'none';
+    }
+  });
+});
