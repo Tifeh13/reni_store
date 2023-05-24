@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: cursive;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .container{
     padding: 2rem 3rem;
@@ -192,11 +192,10 @@ section span{
     width: 100%;
 }
 .grid{
-    padding-top: 2rem;
+    padding-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 15px;
-    margin-left: 26px;
 }
 .grid-container-2{
     width: 100%;
@@ -232,19 +231,21 @@ section span{
 }
 .item-1 img{
     border-radius: 15px;
+    width: 200px;
 }
 .item-2{
     padding-bottom: 2rem;
 }
 .item-2 img{
     border-radius: 15px;
+    width: 200px;
 } 
 .item-3{
     padding-bottom: 2rem;
 }
 .item-3 img{
     border-radius: 15px;
-    position: relative;
+    width: 200px;
 }
 .highlight{
     background-color: yellow;
@@ -311,34 +312,67 @@ section span{
     width: 7px;
     height: 2px;
 }
-.section-5{
+ .section-6{
     width: 100%;
 }
-.section-5-inside{
+.section-6-inside{
     display: grid;
     place-content: center;
     gap: 30px;
     grid-template-columns: 0.5fr 1.8fr 1.2fr;
     width: 100%;
 }
-.shirts{
+.tops{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
+}
+.tops-inside h1 img{
+    width: 120px;
+}
+.tops-inside h2 img{
+    width: 170px;
+}
+.tops-inside{
     display: grid;
     padding-top: 50px;
     place-content: center;
     gap: 50px;
 }
-
-.shirts h1 img{
-    width: 120px;
-}
-.video{
-    background-color: #f6f6f6;
-    opacity: 3;
+.out-vid{
     width: 100%;
-    height: 70vh;
+    height: 130vh;
+}
+.vid{
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 78vh;
     border-radius: 20px;
+}
+.check-out{
+    background-color: orange;
+    width: 100%;
+    height: 100vh;
+}
+#myImage {
+    width: 303px;  
+    transition:  width 0.3s ease-in-out;
+}
+.zoom{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: -20px;
+    width: 90%;
+}
+.zoom button{
+    background-color: #f6f6f6;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+#percentage{
+    font-size: 20px;
 }
 .play-video{
     display: flex;
@@ -346,15 +380,46 @@ section span{
     align-items: center;
     padding-top: 70px;
 }
-.play-video img{
-  width: 303px;
+.movie{
+    width: 23%;
+    background-color: white;
+    height: 8%;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-left: 50px;
 }
-.check-out{
-    background-color: yellow;
-    width: 100%;
-    height: 40vh;
+#movie-main{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    padding-top: 10px;
 }
+#movie-main img{
+    padding-left: 15px;
+}
+.item-3-button {
+    margin-top: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    gap: 10px;
+    border-radius: 10px;
+    bottom: -15%;
+    right: 55%;
+    font-size: 23px;
+}
+.like-inside h4{
+    margin-top: 3rem;
+    /* border-top: 2px solid; */
+    /* border-image: linear-gradient(to right, blue,white);
+    border-image-slice: 1; */
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+    color: #61626D;
 
+}
 
 
 
@@ -373,11 +438,15 @@ section span{
 
 @media (max-width: 1250px){
     .item-3-button {
+        margin-top: 10px;
         background-color: #000;
         color: #fff;
-        padding: 4px 8px;
+        padding: 8px 16px;
         gap: 10px;
         border-radius: 10px;
+        bottom: -15%;
+        right: 55%;
+        font-size: 23px;
     }
     .word-3 h1 {
         /* font-family: 'Poppins'; */
@@ -453,7 +522,7 @@ section span{
     .grid {
         padding-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 6px;
         margin-left: 26px;
     }
@@ -513,7 +582,7 @@ section span{
     .grid {
         padding-top: 2rem;
         display: grid;
-        grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr ;
+        /* grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr ; */
         gap: 12px;
         width: 70%;
         margin-left: 24px;
@@ -644,10 +713,15 @@ section span{
         border-radius: 10px;
     }
     .item-3-button {
+        margin-top: 10px;
         background-color: #000;
         color: #fff;
-        padding: 2px 4px;
+        padding: 8px 16px;
         gap: 10px;
+        border-radius: 10px;
+        bottom: -15%;
+        right: 55%;
+        font-size: 23px;
     }
 }
 @media (max-width: 801px){
@@ -661,7 +735,7 @@ section span{
     .grid {
         padding-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 12px;
         width: 70%;
         margin-left: 24px;
@@ -749,7 +823,7 @@ section span{
     .grid {
         padding-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 12px;
         width: 70%;
         margin-left: 24px;

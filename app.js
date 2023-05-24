@@ -55,3 +55,30 @@ searchInput.addEventListener('input', function(event) {
     }
   });
 });
+
+
+var currentPercentage = 0;
+var image = document.getElementById("myImage");
+var percentageElement = document.getElementById("percentage");
+
+function decreaseImageSize() {
+  if (currentPercentage > 0) {
+    currentPercentage -= 50; // Decrease percentage by 50%
+    updateImageSize();
+  }
+}
+
+function increaseImageSize() {
+  if (currentPercentage < 50) {
+    currentPercentage += 50; // Increase percentage by 50%
+    updateImageSize();
+  }
+}
+
+function updateImageSize() {
+  image.style.width = currentPercentage + "%";
+  percentageElement.textContent = currentPercentage + "%";
+}
+
+
+
