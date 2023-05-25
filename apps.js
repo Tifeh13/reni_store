@@ -67,3 +67,42 @@ sizeButtons.forEach(button => {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ...existing code...
+
+  // Get reference to the cart icon
+  const cartIcon = document.querySelector('.fa-shopping-cart');
+
+  // Initialize cart items count
+  let cartItemsCount = 0;
+
+  // Function to handle adding an item to the cart
+  function addToCart() {
+    // Increment the cart items count
+    cartItemsCount++;
+
+    // Update the cart icon with the new count
+    cartIcon.dataset.count = cartItemsCount;
+  }
+
+  // Add event listeners to the "Add to cart" buttons
+  const addToCartButtons = document.querySelectorAll('.item-3-button');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', addToCart);
+  });
+});
