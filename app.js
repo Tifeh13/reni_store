@@ -141,3 +141,4 @@ function updateImageSize() {
   percentageElement.textContent = currentPercentage + "%";
 }
 
+
