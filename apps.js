@@ -31,6 +31,9 @@ document.querySelector('.quality-inside button:nth-child(1)').addEventListener('
 
 
 
+
+
+
 // Get all size buttons
 const sizeButtons = document.querySelectorAll('.size-btn');
 
@@ -82,27 +85,33 @@ sizeButtons.forEach(button => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  // ...existing code...
+// Desktop Nav
+const cartIconDesktop = document.getElementById('cartCount');
 
-  // Get reference to the cart icon
-  const cartIcon = document.querySelector('.fa-shopping-cart');
+// Set an initial cart count
+let itemCountDesktop = 0;
 
-  // Initialize cart items count
-  let cartItemsCount = 0;
+// Add event listener to the desktop cart icon
+cartIconDesktop.addEventListener('click', addToCartDesktop);
 
-  // Function to handle adding an item to the cart
-  function addToCart() {
-    // Increment the cart items count
-    cartItemsCount++;
+// Function to add an item to the desktop cart
+function addToCartDesktop() {
+  itemCountDesktop++;
+  cartIconDesktop.textContent = itemCountDesktop;
+}
 
-    // Update the cart icon with the new count
-    cartIcon.dataset.count = cartItemsCount;
-  }
 
-  // Add event listeners to the "Add to cart" buttons
-  const addToCartButtons = document.querySelectorAll('.item-3-button');
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', addToCart);
-  });
-});
+// Mobile Nav
+const cartIconMobile = document.getElementById('cartCountMobile');
+
+// Set an initial cart count for mobile
+let itemCountMobile = 0;
+
+// Add event listener to the mobile cart icon
+cartIconMobile.addEventListener('click', addToCartMobile);
+
+// Function to add an item to the mobile cart
+function addToCartMobile() {
+  itemCountMobile++;
+  cartIconMobile.textContent = itemCountMobile;
+}

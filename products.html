@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="products.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./Image/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Reni.store</title>
 </head>
 <body>
@@ -24,26 +25,29 @@
         </div>
                  <ul>
                      <li><a href="#"><img src="./Image/Vector.png" alt=""></a></li>
-                     <li><a href="#" id="cart"><img src="./Image/Group 17.png" alt=""></a></li>
+                     <li><a href="#" id="cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
                  </ul> 
      </nav>
       <!-- Nar-Bar Ends -->
 
              <!-- mobile nav -->
-     <div class="navbar">
-        <div class="navbar-menu">
-            <div class="navbar-logo-1">
-                <img src="./Image/reni.store - logo.png" alt="logo">
-            </div>
-        </div>
-         <a href="#"><img src="./Image/Vector.png" alt=""></a>
-        <a href="#"><img src="./Image/Group 17.png" alt=""></a>
-        <div class="lines" id="menuIcon">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-        </div>
-     </div>
+             <div class="navbar">
+                <div class="navbar-menu">
+                  <div class="navbar-logo-1">
+                    <img src="./Image/reni.store - logo.png" alt="logo">
+                  </div>
+                </div>
+                <a href="#"><img src="./Image/Vector.png" alt=""></a>
+                <a href="#" class="cart-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cartCount">0</span>
+                </a>
+                <div class="lines" id="menuIcon">
+                  <div class="line-1"></div>
+                  <div class="line-2"></div>
+                  <div class="line-3"></div>
+                </div>
+              </div>
      <!-- mobile-nav Ends -->
 
         <div class="container-2">
@@ -275,7 +279,7 @@
             </div>
         </div>
     </div>
-
+    <script src="./product.js"></script>
     <script src="./app.js"></script>
     <script src="./apps.js"></script>
 </body>

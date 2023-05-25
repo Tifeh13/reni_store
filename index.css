@@ -1003,6 +1003,22 @@ section{
         align-items: center;
         gap: 30px;
     }
+    .cart-icon {
+        position: relative;
+      }
+      
+      .cart-icon span {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 4px;
+        border-radius: 50%;
+      }
+      
     .grid {
         padding-top: 2rem;
         display: grid;

@@ -10,6 +10,17 @@
 #reni{
     display: none;
 }
+#cart .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #ff5f6d;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+}
 .navbar{
     display: none;
 }
@@ -725,6 +736,22 @@ section{
         align-items: center;
         gap: 30px;
     }
+    .cart-icon {
+        position: relative;
+      }
+      
+      .cart-icon span {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 4px;
+        border-radius: 50%;
+      }
+      
     .grid {
         padding-top: 2rem;
         display: grid;
