@@ -683,7 +683,24 @@ textarea::placeholder{
     color: lightgreen;
     padding-bottom:2rem;
 }
-
+.size-btn {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    /* Add other button styles as needed */
+  }
+  
+  .size-btn.active {
+    background-color: green;
+    /* Add other styles for the active button */
+  }
+  
+  .size-btn:hover {
+    background-color: blue;
+    color: white;
+    /* Add other styles for the hover effect */
+  }
+  
 
 
 
