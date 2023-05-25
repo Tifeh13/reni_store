@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
 });
 
-
+//serch option
 const searchInput = document.getElementById('search');
 
 const catalogs = document.querySelectorAll('.item-1');
@@ -56,7 +56,7 @@ searchInput.addEventListener('input', function(event) {
   });
 });
 
-
+// increasing of size of image and decreasing
 var currentPercentage = 0;
 var image = document.getElementById("myImage");
 var percentageElement = document.getElementById("percentage");
@@ -79,6 +79,4 @@ function updateImageSize() {
   image.style.width = currentPercentage + "%";
   percentageElement.textContent = currentPercentage + "%";
 }
-
-
 
