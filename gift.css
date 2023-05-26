@@ -744,7 +744,7 @@ section{
         position: absolute;
         top: -8px;
         right: -8px;
-        background-color: red;
+        background-color: #222;
         color: white;
         font-size: 12px;
         font-weight: bold;
