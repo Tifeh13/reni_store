@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
 // Get the search input element
-const searchInput = document.querySelector('.search');
+const searchInput2 = document.querySelector('.search');
 
 // Get the search results container element
 const searchResultsContainer = document.querySelector('#searchResults');
@@ -49,7 +49,7 @@ const searchResultsContainer = document.querySelector('#searchResults');
 // Function to handle the search
 function handleSearch() {
   // Get the search query
-  const query = searchInput.value.toLowerCase();
+  const query = searchInput2.value.toLowerCase();
 
   // Perform the search logic (you can customize this based on your requirements)
   const searchResults = performSearch(query);
@@ -60,51 +60,71 @@ function handleSearch() {
 
 // Function to perform the search (example implementation)
 function performSearch(query) {
-  // Retrieve the words from the web page (you can modify this based on your web page structure)
-  const words = [];
+  // Retrieve the elements from the web page (you can modify this based on your web page structure)
   const elements = document.querySelectorAll('.catalog, .item-1, .item-2, .item-3');
-  elements.forEach(element => {
+
+  // Filter the elements based on the search query
+  const filteredElements = Array.from(elements).filter(element => {
     const textContent = element.textContent.toLowerCase();
-    if (textContent.includes(query)) {
-      words.push({
-        word: textContent,
-        element: element
-      });
+    return textContent.includes(query);
+  });
+
+  return filteredElements;
+}
+
+
+// // Function to display the search results
+// function displaySearchResults(results) {
+// // Clear the previous search results
+// searchResultsContainer.innerHTML = '';
+
+// // Check if there are any results
+// if (results.length === 0) {
+// searchResultsContainer.textContent = 'No results found.';
+// return;
+// }
+
+// // Create and append the search result elements
+// results.forEach(result => {
+// const resultItem = document.createElement('p');
+// resultItem.textContent = result.word;
+// resultItem.classList.add('search-result');
+// resultItem.addEventListener('click', scrollToResult.bind(null, result.element));
+// searchResultsContainer.appendChild(resultItem);
+// });
+// }
+
+// // Function to scroll to the result and highlight the word
+// function scrollToResult(element) {
+// element.classList.add('highlight');
+// element.scrollIntoView({ behavior: 'smooth' });
+// }
+// Get the search input element
+const searchInput = document.querySelector('.search');
+
+// Get all the items in the grid container
+const items = document.querySelectorAll('.grid-container .catalog');
+
+// Add an event listener to the search input
+searchInput.addEventListener('input', function() {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  // Loop through each item in the grid container
+  items.forEach(item => {
+    const itemName = item.querySelector('p').textContent.toLowerCase();
+
+    // Check if the item name contains the search term
+    if (itemName.includes(searchTerm)) {
+      item.style.display = 'block'; // Show the item
+    } else {
+      item.style.display = 'none'; // Hide the item
     }
   });
+});
 
-  return words;
-}
 
-// Function to display the search results
-function displaySearchResults(results) {
-  // Clear the previous search results
-  searchResultsContainer.innerHTML = '';
-
-  // Check if there are any results
-  if (results.length === 0) {
-    searchResultsContainer.textContent = 'No results found.';
-    return;
-  }
-
-  // Create and append the search result elements
-  results.forEach(result => {
-    const resultItem = document.createElement('p');
-    resultItem.textContent = result.word;
-    resultItem.classList.add('search-result');
-    resultItem.addEventListener('click', scrollToResult.bind(null, result.element));
-    searchResultsContainer.appendChild(resultItem);
-  });
-}
-
-// Function to scroll to the result and highlight the word
-function scrollToResult(element) {
-  element.classList.add('highlight');
-  element.scrollIntoView({ behavior: 'smooth' });
-}
-
-// Add event listener to the search input
-searchInput.addEventListener('input', handleSearch);
+// // Add event listener to the search input
+// searchInput.addEventListener('input', handleSearch);
 
 
 
